@@ -214,16 +214,16 @@ var require_stdin = __commonJS({
         Ee.forEach((n) => t.indexOf(n) === -1 ? e.push(n) : x.push(n)), x.forEach((n) => n()), Ee = e;
       }
       const Re = /* @__PURE__ */ new Set();
-      let W0;
+      let X0;
       function ex() {
-        W0 = {
+        X0 = {
           r: 0,
           c: [],
-          p: W0
+          p: X0
         };
       }
       function xx() {
-        W0.r || i0(W0.c), W0 = W0.p;
+        X0.r || i0(X0.c), X0 = X0.p;
       }
       function B0(t, e) {
         t && t.i && (Re.delete(t), t.i(e));
@@ -231,7 +231,7 @@ var require_stdin = __commonJS({
       function F0(t, e, x, n) {
         if (t && t.o) {
           if (Re.has(t)) return;
-          Re.add(t), W0.c.push(() => {
+          Re.add(t), X0.c.push(() => {
             Re.delete(t), n && (x && t.d(1), n());
           }), t.o(e);
         } else n && n();
@@ -1077,7 +1077,7 @@ var require_stdin = __commonJS({
       function Fl(t, e, x) {
         return S0(), cr(t, e, x);
       }
-      function Z0(t) {
+      function $0(t) {
         let e = "";
         for (let x = 0; x < t.length; x++) e += String.fromCharCode(t[x]);
         return btoa(e).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
@@ -1103,25 +1103,25 @@ var require_stdin = __commonJS({
           name: r
         };
       }
-      function X0(t, e, x) {
+      function Z0(t, e, x) {
         S0();
         const n = new Uint8Array(68);
         return n.set(t, 0), n.set(e, 32), n[64] = x >>> 24 & 255, n[65] = x >>> 16 & 255, n[66] = x >>> 8 & 255, n[67] = x & 255, Yn(n);
       }
-      const $0 = Y0("ok");
+      const ee = Y0("ok");
       let xo = "ok";
-      $0.subscribe((t) => {
+      ee.subscribe((t) => {
         xo = t;
       });
       let Ye = null;
       function pl() {
-        clearTimeout(Ye), $0.set("retrying");
+        clearTimeout(Ye), ee.set("retrying");
       }
       function ml() {
-        xo !== "ok" && (clearTimeout(Ye), $0.set("reconnected"), Ye = setTimeout(() => $0.set("ok"), 3e3));
+        xo !== "ok" && (clearTimeout(Ye), ee.set("reconnected"), Ye = setTimeout(() => ee.set("ok"), 3e3));
       }
       function rt() {
-        clearTimeout(Ye), $0.set("down");
+        clearTimeout(Ye), ee.set("down");
       }
       function lt(t) {
         let e;
@@ -1209,7 +1209,7 @@ var require_stdin = __commonJS({
       }
       function vl(t, e, x) {
         let n;
-        return U0(t, $0, (o) => x(0, n = o)), [
+        return U0(t, ee, (o) => x(0, n = o)), [
           n
         ];
       }
@@ -1227,7 +1227,7 @@ var require_stdin = __commonJS({
         503,
         504
       ]);
-      async function te(t, e = {}) {
+      async function Q0(t, e = {}) {
         const x = {
           ...e,
           headers: {
@@ -1245,15 +1245,15 @@ var require_stdin = __commonJS({
           pl(), await new Promise((o) => setTimeout(o, ux[n]));
         }
       }
-      let ee = null, jx = null, Rx = null;
+      let xe = null, jx = null, Rx = null;
       const ne = Y0(null), ox = Y0(null), be = Y0(null);
       function M0() {
-        return ee !== null;
+        return xe !== null;
       }
       function qx(t) {
         jx = t;
       }
-      function xe() {
+      function te() {
         return jx;
       }
       function to(t) {
@@ -1263,7 +1263,7 @@ var require_stdin = __commonJS({
         return Rx;
       }
       function yl() {
-        ee = null, jx = null, Rx = null, ne.set(null), ox.set(null), be.set(null);
+        xe = null, jx = null, Rx = null, ne.set(null), ox.set(null), be.set(null);
       }
       async function Pl() {
         try {
@@ -1296,7 +1296,7 @@ var require_stdin = __commonJS({
         if (!t.ok) throw new Error(await p0(t));
       }
       async function Il(t) {
-        const e = await te(`${A0}/v1/verify-email`, {
+        const e = await Q0(`${A0}/v1/verify-email`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1309,7 +1309,7 @@ var require_stdin = __commonJS({
         ne.set(true);
       }
       async function Ox(t) {
-        const e = await te(`${A0}/v1/prelogin`, {
+        const e = await Q0(`${A0}/v1/prelogin`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1322,7 +1322,7 @@ var require_stdin = __commonJS({
         return e.json();
       }
       async function Ll(t, e, x) {
-        const n = await te(`${A0}/v1/signup`, {
+        const n = await Q0(`${A0}/v1/signup`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1335,7 +1335,7 @@ var require_stdin = __commonJS({
         });
         if (!n.ok) throw new Error(await p0(n));
         const o = await n.json();
-        return ee = o.session_token, ne.set(false), o;
+        return xe = o.session_token, ne.set(false), o;
       }
       async function at(t, e, x = null) {
         const n = {
@@ -1343,7 +1343,7 @@ var require_stdin = __commonJS({
           auth_signature: e
         };
         x && (n.otp = x);
-        const o = await te(`${A0}/v1/login`, {
+        const o = await Q0(`${A0}/v1/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1352,7 +1352,7 @@ var require_stdin = __commonJS({
         });
         if (!o.ok) throw new Error(await p0(o));
         const r = await o.json();
-        return r.requires_otp || (ee = r.session_token, r.bootstrap ? (ne.set(r.bootstrap.email_verified), ox.set(r.bootstrap.email), be.set(r.bootstrap.totp_enabled)) : Pl()), r;
+        return r.requires_otp || (xe = r.session_token, r.bootstrap ? (ne.set(r.bootstrap.email_verified), ox.set(r.bootstrap.email), be.set(r.bootstrap.totp_enabled)) : Pl()), r;
       }
       async function Nl() {
         const t = await P0(`${A0}/v1/web/totp/setup`, {
@@ -1394,9 +1394,9 @@ var require_stdin = __commonJS({
         return t.json();
       }
       async function no() {
-        if (!ee) return;
-        const t = ee;
-        yl(), fetch(`${A0}/v1/web/logout`, {
+        if (!xe) return;
+        const t = xe;
+        yl(), Q0(`${A0}/v1/web/logout`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${t}`
@@ -1453,7 +1453,7 @@ var require_stdin = __commonJS({
         if (!o.ok) throw new Error(await p0(o));
       }
       async function Gl(t) {
-        const e = await te(`${A0}/v1/query`, {
+        const e = await Q0(`${A0}/v1/query`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1472,7 +1472,7 @@ var require_stdin = __commonJS({
         if (!e.ok && e.status !== 404) throw new Error(await p0(e));
       }
       async function Kl(t) {
-        const e = await te(`${A0}/v1/submit`, {
+        const e = await Q0(`${A0}/v1/submit`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1487,10 +1487,10 @@ var require_stdin = __commonJS({
         throw l.statusCode = e.status, l.serverTime = x, l.powDifficulty = o, l;
       }
       function P0(t, e = {}) {
-        return te(t, {
+        return Q0(t, {
           ...e,
           headers: {
-            Authorization: `Bearer ${ee}`,
+            Authorization: `Bearer ${xe}`,
             ...e.headers ?? {}
           }
         });
@@ -1748,8 +1748,8 @@ var require_stdin = __commonJS({
         };
       }
       let K = null, fe = 0, wx = false;
-      $0.subscribe((t) => {
-        t === "reconnected" && wx && K && xe() && w0().catch(() => {
+      ee.subscribe((t) => {
+        t === "reconnected" && wx && K && te() && w0().catch(() => {
         });
       });
       function R0() {
@@ -1797,7 +1797,7 @@ var require_stdin = __commonJS({
           }, fe = 0, await w0();
           return;
         }
-        const n = nx(xe(), _0(e));
+        const n = nx(te(), _0(e));
         K = $l(n), fe = x, await Bs(), Gx();
       }
       async function xs(t, e, x) {
@@ -2017,7 +2017,7 @@ var require_stdin = __commonJS({
       async function w0() {
         const t = Vx(K);
         io.set(t.byteLength >= ao);
-        const e = Pe(xe(), t);
+        const e = Pe(te(), t);
         try {
           const { blob_version: x } = await Ul(t0(e), fe);
           fe = x, wx = false;
@@ -2034,7 +2034,7 @@ var require_stdin = __commonJS({
           let n = [];
           const o = localStorage.getItem(ue);
           if (o) try {
-            n = JSON.parse(new TextDecoder().decode(nx(xe(), _0(o))));
+            n = JSON.parse(new TextDecoder().decode(nx(te(), _0(o))));
           } catch {
             n = [];
           }
@@ -2044,7 +2044,7 @@ var require_stdin = __commonJS({
             date: x
           });
           const r = new TextEncoder().encode(JSON.stringify(n));
-          localStorage.setItem(ue, t0(Pe(xe(), r)));
+          localStorage.setItem(ue, t0(Pe(te(), r)));
         } catch {
         }
       }
@@ -2053,7 +2053,7 @@ var require_stdin = __commonJS({
         try {
           const e = localStorage.getItem(ue);
           if (!e) return;
-          t = JSON.parse(new TextDecoder().decode(nx(xe(), _0(e))));
+          t = JSON.parse(new TextDecoder().decode(nx(te(), _0(e))));
         } catch {
           try {
             localStorage.removeItem(ue);
@@ -2088,7 +2088,7 @@ var require_stdin = __commonJS({
         if (!t) return 0;
         const n = Oe().filter((E) => E.positiveDiseases.length === 0).map((E) => E.date).sort().pop() ?? null, o = /* @__PURE__ */ new Map(), r = [];
         for (const E of t.encounters) {
-          const f = X0(E.rawToken, e, E.queryIndex), d = Z0(f);
+          const f = Z0(E.rawToken, e, E.queryIndex), d = $0(f);
           o.set(d, {
             rawTokenHex: t0(E.rawToken),
             alertDate: E.date
@@ -2096,7 +2096,7 @@ var require_stdin = __commonJS({
         }
         for (const E of t.relationships || []) {
           if (!fs(E, n)) continue;
-          const f = X0(E.rawToken, e, E.queryIndex), d = Z0(f);
+          const f = Z0(E.rawToken, e, E.queryIndex), d = $0(f);
           o.set(d, {
             rawTokenHex: t0(E.rawToken),
             alertDate: E.createdAt
@@ -2106,7 +2106,7 @@ var require_stdin = __commonJS({
         const l = Math.max(50, r.length * 2), s = [
           ...r
         ];
-        for (; s.length < l; ) s.push(Z0(ye(32)));
+        for (; s.length < l; ) s.push($0(ye(32)));
         for (let E = s.length - 1; E > 0; E--) {
           const f = Math.floor(Math.random() * (E + 1));
           [s[E], s[f]] = [
@@ -2135,12 +2135,12 @@ var require_stdin = __commonJS({
           const D = new TextDecoder().decode(F), p = D.slice(1, 9), m = `${p.slice(0, 4)}-${p.slice(4, 6)}-${p.slice(6, 8)}`, b = D.length > 9 ? D.slice(9).split(",") : [], h = Object.fromEntries(Object.entries(uo).map(([T, M]) => [
             M,
             T
-          ])), k = b.map((T) => h[T]).filter(Boolean), _ = t0(X0(C.rawToken, e, C.queryIndex));
+          ])), k = b.map((T) => h[T]).filter(Boolean), _ = t0(Z0(C.rawToken, e, C.queryIndex));
           await ls(f.rawTokenHex, m, k, E.verified), c++;
           const v = [
             ...R0().encounters || [],
             ...R0().relationships || []
-          ].find((T) => t0(T.rawToken) === f.rawTokenHex), g = t0(X0(C.rawToken, e, v?.queryIndex ?? C.queryIndex + 1));
+          ].find((T) => t0(T.rawToken) === f.rawTokenHex), g = t0(Z0(C.rawToken, e, v?.queryIndex ?? C.queryIndex + 1));
           try {
             await oo(g, f.alertDate);
           } catch (T) {
@@ -3875,8 +3875,8 @@ var require_stdin = __commonJS({
         });
         async function f(k, _) {
           const v = R0(), g = de(), T = [
-            ...v.encounters.map((s0) => X0(s0.rawToken, s0.theirContactId, s0.submitIndex)),
-            ...(v.relationships || []).map((s0) => X0(s0.rawToken, s0.theirContactId, s0.submitIndex))
+            ...v.encounters.map((s0) => Z0(s0.rawToken, s0.theirContactId, s0.submitIndex)),
+            ...(v.relationships || []).map((s0) => Z0(s0.rawToken, s0.theirContactId, s0.submitIndex))
           ], M = Yt + Math.floor(Math.random() * (f9 - Yt + 1)), L = [
             ...T
           ];
@@ -3888,7 +3888,7 @@ var require_stdin = __commonJS({
               L[s0]
             ];
           }
-          const S = L.map((s0) => Z0(s0)), N = $n(g), I = k.replace(/-/g, ""), R = _.map((s0) => uo[s0] ?? s0).join(""), z = new TextEncoder().encode("1" + I + R), H = Pe(N, z), Q = Z0(H), Y = new TextEncoder(), O = JSON.stringify(S), q = Y.encode(O).length + Y.encode(Q).length, $ = new Uint8Array(q), W = Y.encode(O), V = Y.encode(Q);
+          const S = L.map((s0) => $0(s0)), N = $n(g), I = k.replace(/-/g, ""), R = _.map((s0) => uo[s0] ?? s0).join(""), z = new TextEncoder().encode("1" + I + R), H = Pe(N, z), Q = $0(H), Y = new TextEncoder(), O = JSON.stringify(S), q = Y.encode(O).length + Y.encode(Q).length, $ = new Uint8Array(q), W = Y.encode(O), V = Y.encode(Q);
           $.set(W, 0), $.set(V, W.length);
           const l0 = Al($);
           let c0 = u9, n0 = (/* @__PURE__ */ new Date()).toISOString();
@@ -4064,12 +4064,12 @@ var require_stdin = __commonJS({
           }
           x(3, l = true);
           try {
-            const C = wl(), { challenge: B, auth_salt: F, enc_salt: D } = await Ox(C), p = await z0(n, _0(D)), m = xe();
+            const C = wl(), { challenge: B, auth_salt: F, enc_salt: D } = await Ox(C), p = await z0(n, _0(D)), m = te();
             if (!m || p.length !== m.length || !p.every((L, S) => L === m[S])) {
               x(4, s = "Current password is incorrect");
               return;
             }
-            const b = await z0(n, _0(F)), h = Zn(new TextEncoder().encode(B), b), k = Z0(h), _ = await z0(o, _0(F)), v = await z0(o, _0(D)), g = t0(Xn(_)), { blobHex: T, blobVersion: M } = Es(v);
+            const b = await z0(n, _0(F)), h = Zn(new TextEncoder().encode(B), b), k = $0(h), _ = await z0(o, _0(F)), v = await z0(o, _0(D)), g = t0(Xn(_)), { blobHex: T, blobVersion: M } = Es(v);
             await zl(k, g, T, M), qx(v), us(M + 1), x(5, a = true), x(0, n = ""), x(1, o = ""), x(2, r = "");
           } catch (C) {
             x(4, s = C.message);
@@ -5285,7 +5285,7 @@ var require_stdin = __commonJS({
         }
         return n;
       };
-      var G9 = Jx, bo = {}, Q0 = {}, Wx = {};
+      var G9 = Jx, bo = {}, J0 = {}, Wx = {};
       Wx.isValid = function(e) {
         return !isNaN(e) && e >= 1 && e <= 40;
       };
@@ -5381,9 +5381,9 @@ var require_stdin = __commonJS({
             return l;
           }
         };
-      })(Q0);
+      })(J0);
       (function(t) {
-        const e = T0, x = sx, n = lx, o = Q0, r = Wx, l = 7973, s = e.getBCHDigit(l);
+        const e = T0, x = sx, n = lx, o = J0, r = Wx, l = 7973, s = e.getBCHDigit(l);
         function a(d, C, B) {
           for (let F = 1; F <= 40; F++) if (C <= t.getCapacity(F, B, d)) return F;
         }
@@ -5444,7 +5444,7 @@ var require_stdin = __commonJS({
         return (n << 10 | o) ^ W9;
       };
       var yo = {};
-      const X9 = Q0;
+      const X9 = J0;
       function Be(t) {
         this.mode = X9.NUMERIC, this.data = t.toString();
       }
@@ -5464,7 +5464,7 @@ var require_stdin = __commonJS({
         r > 0 && (n = this.data.substr(x), o = parseInt(n, 10), e.put(o, r * 3 + 1));
       };
       var Z9 = Be;
-      const $9 = Q0, Bx = [
+      const $9 = J0, Bx = [
         "0",
         "1",
         "2",
@@ -5532,7 +5532,7 @@ var require_stdin = __commonJS({
         this.data.length % 2 && e.put(Bx.indexOf(this.data[x]), 6);
       };
       var ea = Ce;
-      const xa = Q0;
+      const xa = J0;
       function Ae(t) {
         this.mode = xa.BYTE, typeof t == "string" ? this.data = new TextEncoder().encode(t) : this.data = new Uint8Array(t);
       }
@@ -5549,7 +5549,7 @@ var require_stdin = __commonJS({
         for (let e = 0, x = this.data.length; e < x; e++) t.put(this.data[e], 8);
       };
       var ta = Ae;
-      const na = Q0, oa = T0;
+      const na = J0, oa = T0;
       function Fe(t) {
         this.mode = na.KANJI, this.data = t;
       }
@@ -5636,7 +5636,7 @@ Make sure your charset is UTF-8`);
       })(Po);
       var la = Po.exports;
       (function(t) {
-        const e = Q0, x = Z9, n = ea, o = ta, r = ra, l = H0, s = T0, a = la;
+        const e = J0, x = Z9, n = ea, o = ta, r = ra, l = H0, s = T0, a = la;
         function c(p) {
           return unescape(encodeURIComponent(p)).length;
         }
@@ -5790,7 +5790,7 @@ Make sure your charset is UTF-8`);
           return t.fromArray(f(m, s.isKanjiModeEnabled()));
         };
       })(yo);
-      const ix = T0, Cx = lx, sa = H9, aa = U9, ia = po, ca = mo, Tx = ho, Sx = sx, Ea = G9, Ze = bo, ua = go, fa = Q0, Ax = yo;
+      const ix = T0, Cx = lx, sa = H9, aa = U9, ia = po, ca = mo, Tx = ho, Sx = sx, Ea = G9, Ze = bo, ua = go, fa = J0, Ax = yo;
       function da(t, e) {
         const x = t.size, n = ca.getPositions(e);
         for (let o = 0; o < n.length; o++) {
@@ -17963,10 +17963,10 @@ Minimum version required to store current data is: ` + r + `.
                           startX: Z,
                           endX: u0,
                           y: q
-                        }, J0 = k.filter(function(N0) {
+                        }, W0 = k.filter(function(N0) {
                           return Z >= N0.bottom.startX && Z <= N0.bottom.endX || u0 >= N0.bottom.startX && Z <= N0.bottom.endX || Z <= N0.bottom.startX && u0 >= N0.bottom.endX && V[2] / (N0.bottom.endX - N0.bottom.startX) < s && V[2] / (N0.bottom.endX - N0.bottom.startX) > l;
                         });
-                        J0.length > 0 ? J0[0].bottom = a0 : k.push({
+                        W0.length > 0 ? W0[0].bottom = a0 : k.push({
                           top: a0,
                           bottom: a0
                         });
@@ -17976,10 +17976,10 @@ Minimum version required to store current data is: ` + r + `.
                           startX: L0,
                           y: q,
                           endX: re
-                        }, J0 = v.filter(function(j0) {
+                        }, W0 = v.filter(function(j0) {
                           return L0 >= j0.bottom.startX && L0 <= j0.bottom.endX || re >= j0.bottom.startX && L0 <= j0.bottom.endX || L0 <= j0.bottom.startX && re >= j0.bottom.endX && V[2] / (j0.bottom.endX - j0.bottom.startX) < s && V[2] / (j0.bottom.endX - j0.bottom.startX) > l;
                         });
-                        J0.length > 0 ? J0[0].bottom = a0 : v.push({
+                        W0.length > 0 ? W0[0].bottom = a0 : v.push({
                           top: a0,
                           bottom: a0
                         });
@@ -18671,7 +18671,7 @@ Minimum version required to store current data is: ` + r + `.
           }
           try {
             const J = Bl(), e0 = de(), r0 = Math.floor(Date.now() / 1e3);
-            r = J.privateKey, s = px(J.publicKey), l = `1|${Z0(J.publicKey)}|${r0}|${t0(e0)}`, x(2, a = await oe.toString(l, {
+            r = J.privateKey, s = px(J.publicKey), l = `1|${$0(J.publicKey)}|${r0}|${t0(e0)}`, x(2, a = await oe.toString(l, {
               type: "svg",
               margin: 1,
               color: {
@@ -18794,13 +18794,13 @@ Minimum version required to store current data is: ` + r + `.
           }
           const e0 = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
           g = Cl(r, m), T = e0;
-          const u0 = R0()?.encounters || [], Z = Kx(), a0 = t0(b), J0 = u0.some((L0) => t0(L0.theirContactId) === a0), re = Z.some((L0) => t0(L0.theirContactId) === a0 && !L0.endedAt);
-          J0 && !re ? x(0, n = "ongoing?") : await Y(false);
+          const u0 = R0()?.encounters || [], Z = Kx(), a0 = t0(b), W0 = u0.some((L0) => t0(L0.theirContactId) === a0), re = Z.some((L0) => t0(L0.theirContactId) === a0 && !L0.endedAt);
+          W0 && !re ? x(0, n = "ongoing?") : await Y(false);
         }
         async function Y(J) {
           x(12, M = true);
           try {
-            const e0 = de(), r0 = X0(g, e0, 0);
+            const e0 = de(), r0 = Z0(g, e0, 0);
             await oo(t0(r0), T), J ? await ts(g, b, T) : await xs(g, b, T), x(0, n = "saved");
           } catch (e0) {
             x(1, o = e0.message), x(0, n = "error");
