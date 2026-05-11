@@ -27188,7 +27188,8 @@ Minimum version required to store current data is: ` + o + `.
         tracesSampleRate: 0.1,
         beforeSend(t) {
           t.request?.url && (t.request.url = kr(t.request.url));
-          for (const e of t.breadcrumbs?.values ?? []) e.data?.url && (e.data.url = kr(e.data.url)), e.data?.to && (e.data.to = kr(e.data.to)), e.data?.from && (e.data.from = kr(e.data.from));
+          const e = t.breadcrumbs?.values;
+          if (Array.isArray(e)) for (const n of e) n.data?.url && (n.data.url = kr(n.data.url)), n.data?.to && (n.data.to = kr(n.data.to)), n.data?.from && (n.data.from = kr(n.data.from));
           return t;
         }
       });
