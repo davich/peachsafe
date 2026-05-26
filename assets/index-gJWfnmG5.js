@@ -9665,19 +9665,19 @@ Error:`, r);
       }
       function Ml(t, e, n) {
         const s = t.slice();
-        return s[20] = e[n], s;
+        return s[22] = e[n], s;
       }
       function ql(t, e, n) {
         const s = t.slice();
-        return s[23] = e[n], s;
+        return s[25] = e[n], s;
       }
       function Hl(t, e, n) {
         const s = t.slice();
-        return s[26] = e[n], s;
+        return s[28] = e[n], s;
       }
       function Bl(t, e, n) {
         const s = t.slice();
-        return s[23] = e[n], s;
+        return s[25] = e[n], s;
       }
       function Fl(t) {
         let e, n, s, r, o, i, a, l, f, d, m = t[6] ? "Creating\u2026" : "Group encounter", h, _, g, b, v, w, y, R, N, E = t[7] && zl(t);
@@ -9687,15 +9687,15 @@ Error:`, r);
           },
           m(k, T) {
             C(k, e, T), c(e, n), c(n, s), c(n, r), c(n, o), c(n, i), c(n, a), c(a, l), c(a, f), c(a, d), c(d, h), c(a, _), c(a, g), c(n, b), E && E.m(n, null), c(n, v), c(n, w), c(w, y), R || (N = [
-              z(o, "click", t[14]),
-              z(a, "click", t[10]),
-              z(w, "click", t[15]),
-              z(n, "click", Gv(t[12])),
-              z(e, "click", t[16])
+              z(o, "click", t[16]),
+              z(a, "click", t[12]),
+              z(w, "click", t[17]),
+              z(n, "click", Gv(t[14])),
+              z(e, "click", t[18])
             ], R = true);
           },
           p(k, T) {
-            T & 64 && m !== (m = k[6] ? "Creating\u2026" : "Group encounter") && W(h, m), T & 64 && (a.disabled = k[6]), k[7] ? E ? E.p(k, T) : (E = zl(k), E.c(), E.m(n, v)) : E && (E.d(1), E = null), T & 64 && (w.disabled = k[6]);
+            T[0] & 64 && m !== (m = k[6] ? "Creating\u2026" : "Group encounter") && W(h, m), T[0] & 64 && (a.disabled = k[6]), k[7] ? E ? E.p(k, T) : (E = zl(k), E.c(), E.m(n, v)) : E && (E.d(1), E = null), T[0] & 64 && (w.disabled = k[6]);
           },
           d(k) {
             k && I(e), E && E.d(), R = false, ce(N);
@@ -9712,7 +9712,7 @@ Error:`, r);
             C(s, e, r), c(e, n);
           },
           p(s, r) {
-            r & 128 && W(n, s[7]);
+            r[0] & 128 && W(n, s[7]);
           },
           d(s) {
             s && I(e);
@@ -9720,9 +9720,9 @@ Error:`, r);
         };
       }
       function rw(t) {
-        let e, n, s, r, o = t[9].length > 0 && Ul(t), i = t[1].length > 0 && Wl(t), a = t[8].length > 0 && Vl(t);
+        let e, n, s, r, o = t[10].length > 0 && Ul(t), i = t[8].length > 0 && Wl(t), a = t[9].length > 0 && Vl(t);
         function l(m, h) {
-          return m[0].length === 0 && m[9].length === 0 && m[8].length === 0 && m[1].length === 0 ? cw : m[0].length === 0 ? lw : aw;
+          return m[0].length === 0 && m[10].length === 0 && m[9].length === 0 && m[1].length === 0 ? cw : m[0].length === 0 ? lw : aw;
         }
         let f = l(t), d = f(t);
         return {
@@ -9733,7 +9733,7 @@ Error:`, r);
             o && o.m(m, h), C(m, e, h), i && i.m(m, h), C(m, n, h), a && a.m(m, h), C(m, s, h), C(m, r, h), d.m(r, null);
           },
           p(m, h) {
-            m[9].length > 0 ? o ? o.p(m, h) : (o = Ul(m), o.c(), o.m(e.parentNode, e)) : o && (o.d(1), o = null), m[1].length > 0 ? i ? i.p(m, h) : (i = Wl(m), i.c(), i.m(n.parentNode, n)) : i && (i.d(1), i = null), m[8].length > 0 ? a ? a.p(m, h) : (a = Vl(m), a.c(), a.m(s.parentNode, s)) : a && (a.d(1), a = null), f === (f = l(m)) && d ? d.p(m, h) : (d.d(1), d = f(m), d && (d.c(), d.m(r, null)));
+            m[10].length > 0 ? o ? o.p(m, h) : (o = Ul(m), o.c(), o.m(e.parentNode, e)) : o && (o.d(1), o = null), m[8].length > 0 ? i ? i.p(m, h) : (i = Wl(m), i.c(), i.m(n.parentNode, n)) : i && (i.d(1), i = null), m[9].length > 0 ? a ? a.p(m, h) : (a = Vl(m), a.c(), a.m(s.parentNode, s)) : a && (a.d(1), a = null), f === (f = l(m)) && d ? d.p(m, h) : (d.d(1), d = f(m), d && (d.c(), d.m(r, null)));
           },
           d(m) {
             m && (I(e), I(n), I(s), I(r)), o && o.d(m), i && i.d(m), a && a.d(m), d.d();
@@ -9750,7 +9750,7 @@ Error:`, r);
             C(r, e, o), c(e, n), c(n, s);
           },
           p(r, o) {
-            o & 8 && W(s, r[3]);
+            o[0] & 8 && W(s, r[3]);
           },
           d(r) {
             r && I(e);
@@ -9773,7 +9773,7 @@ Error:`, r);
         };
       }
       function Ul(t) {
-        let e, n, s, r, o = Se(t[9]), i = [];
+        let e, n, s, r, o = Se(t[10]), i = [];
         for (let a = 0; a < o.length; a += 1) i[a] = jl(Bl(t, o, a));
         return {
           c() {
@@ -9786,8 +9786,8 @@ Error:`, r);
             for (let f = 0; f < i.length; f += 1) i[f] && i[f].m(r, null);
           },
           p(a, l) {
-            if (l & 512) {
-              o = Se(a[9]);
+            if (l[0] & 1024) {
+              o = Se(a[10]);
               let f;
               for (f = 0; f < o.length; f += 1) {
                 const d = Bl(a, o, f);
@@ -9803,16 +9803,16 @@ Error:`, r);
         };
       }
       function jl(t) {
-        let e, n, s, r, o, i, a = Kr(t[23]) + "", l, f, d, m = Jr(t[23]) + "", h, _, g, b, v;
+        let e, n, s, r, o, i, a = Kr(t[25]) + "", l, f, d, m = Jr(t[25]) + "", h, _, g, b, v;
         return {
           c() {
-            e = p("li"), n = p("a"), s = p("span"), s.textContent = "favorite", r = S(), o = p("span"), i = p("span"), l = O(a), f = S(), d = p("span"), h = O(m), _ = S(), g = p("span"), g.textContent = "chevron_right", v = S(), u(s, "class", "material-icons rel-icon active svelte-81oe9z"), u(i, "class", "rel-name svelte-81oe9z"), u(d, "class", "rel-sub svelte-81oe9z"), u(o, "class", "rel-main svelte-81oe9z"), u(g, "class", "material-icons chevron svelte-81oe9z"), u(n, "class", "rel-row svelte-81oe9z"), u(n, "href", b = "#/relationships/" + ne(t[23].rawToken)), u(e, "class", "svelte-81oe9z");
+            e = p("li"), n = p("a"), s = p("span"), s.textContent = "favorite", r = S(), o = p("span"), i = p("span"), l = O(a), f = S(), d = p("span"), h = O(m), _ = S(), g = p("span"), g.textContent = "chevron_right", v = S(), u(s, "class", "material-icons rel-icon active svelte-81oe9z"), u(i, "class", "rel-name svelte-81oe9z"), u(d, "class", "rel-sub svelte-81oe9z"), u(o, "class", "rel-main svelte-81oe9z"), u(g, "class", "material-icons chevron svelte-81oe9z"), u(n, "class", "rel-row svelte-81oe9z"), u(n, "href", b = "#/relationships/" + ne(t[25].rawToken)), u(e, "class", "svelte-81oe9z");
           },
           m(w, y) {
             C(w, e, y), c(e, n), c(n, s), c(n, r), c(n, o), c(o, i), c(i, l), c(o, f), c(o, d), c(d, h), c(n, _), c(n, g), c(e, v);
           },
           p(w, y) {
-            y & 512 && a !== (a = Kr(w[23]) + "") && W(l, a), y & 512 && m !== (m = Jr(w[23]) + "") && W(h, m), y & 512 && b !== (b = "#/relationships/" + ne(w[23].rawToken)) && u(n, "href", b);
+            y[0] & 1024 && a !== (a = Kr(w[25]) + "") && W(l, a), y[0] & 1024 && m !== (m = Jr(w[25]) + "") && W(h, m), y[0] & 1024 && b !== (b = "#/relationships/" + ne(w[25].rawToken)) && u(n, "href", b);
           },
           d(w) {
             w && I(e);
@@ -9820,7 +9820,7 @@ Error:`, r);
         };
       }
       function Wl(t) {
-        let e, n, s, r, o = Se(t[1]), i = [];
+        let e, n, s, r, o = Se(t[8]), i = [];
         for (let a = 0; a < o.length; a += 1) i[a] = Gl(Hl(t, o, a));
         return {
           c() {
@@ -9833,8 +9833,8 @@ Error:`, r);
             for (let f = 0; f < i.length; f += 1) i[f] && i[f].m(r, null);
           },
           p(a, l) {
-            if (l & 2) {
-              o = Se(a[1]);
+            if (l[0] & 256) {
+              o = Se(a[8]);
               let f;
               for (f = 0; f < o.length; f += 1) {
                 const d = Hl(a, o, f);
@@ -9850,16 +9850,16 @@ Error:`, r);
         };
       }
       function Gl(t) {
-        let e, n, s, r, o, i, a = Xl(t[26]) + "", l, f, d, m = Ql(t[26]) + "", h, _, g, b, v;
+        let e, n, s, r, o, i, a = Xl(t[28]) + "", l, f, d, m = Ql(t[28]) + "", h, _, g, b, v;
         return {
           c() {
-            e = p("li"), n = p("a"), s = p("span"), s.textContent = "groups", r = S(), o = p("span"), i = p("span"), l = O(a), f = S(), d = p("span"), h = O(m), _ = S(), g = p("span"), g.textContent = "chevron_right", v = S(), u(s, "class", "material-icons rel-icon active svelte-81oe9z"), u(i, "class", "rel-name svelte-81oe9z"), u(d, "class", "rel-sub svelte-81oe9z"), u(o, "class", "rel-main svelte-81oe9z"), u(g, "class", "material-icons chevron svelte-81oe9z"), u(n, "class", "rel-row svelte-81oe9z"), u(n, "href", b = "#/groups/" + ne(t[26].token)), u(e, "class", "svelte-81oe9z");
+            e = p("li"), n = p("a"), s = p("span"), s.textContent = "groups", r = S(), o = p("span"), i = p("span"), l = O(a), f = S(), d = p("span"), h = O(m), _ = S(), g = p("span"), g.textContent = "chevron_right", v = S(), u(s, "class", "material-icons rel-icon active svelte-81oe9z"), u(i, "class", "rel-name svelte-81oe9z"), u(d, "class", "rel-sub svelte-81oe9z"), u(o, "class", "rel-main svelte-81oe9z"), u(g, "class", "material-icons chevron svelte-81oe9z"), u(n, "class", "rel-row svelte-81oe9z"), u(n, "href", b = "#/groups/" + ne(t[28].token)), u(e, "class", "svelte-81oe9z");
           },
           m(w, y) {
             C(w, e, y), c(e, n), c(n, s), c(n, r), c(n, o), c(o, i), c(i, l), c(o, f), c(o, d), c(d, h), c(n, _), c(n, g), c(e, v);
           },
           p(w, y) {
-            y & 2 && a !== (a = Xl(w[26]) + "") && W(l, a), y & 2 && m !== (m = Ql(w[26]) + "") && W(h, m), y & 2 && b !== (b = "#/groups/" + ne(w[26].token)) && u(n, "href", b);
+            y[0] & 256 && a !== (a = Xl(w[28]) + "") && W(l, a), y[0] & 256 && m !== (m = Ql(w[28]) + "") && W(h, m), y[0] & 256 && b !== (b = "#/groups/" + ne(w[28].token)) && u(n, "href", b);
           },
           d(w) {
             w && I(e);
@@ -9867,16 +9867,16 @@ Error:`, r);
         };
       }
       function Vl(t) {
-        let e, n, s, r = t[4] ? "expand_less" : "expand_more", o, i, a, l, f = t[8].length + "", d, m, h, _, g, b = t[4] && Yl(t);
+        let e, n, s, r = t[4] ? "expand_less" : "expand_more", o, i, a, l, f = t[9].length + "", d, m, h, _, g, b = t[4] && Yl(t);
         return {
           c() {
             e = p("section"), n = p("button"), s = p("span"), o = O(r), i = S(), a = p("span"), l = O("Archived partners ("), d = O(f), m = O(")"), h = S(), b && b.c(), u(s, "class", "material-icons toggle-icon svelte-81oe9z"), u(a, "class", "muted-label svelte-81oe9z"), u(n, "class", "collapse-toggle svelte-81oe9z"), u(e, "class", "card list-card svelte-81oe9z");
           },
           m(v, w) {
-            C(v, e, w), c(e, n), c(n, s), c(s, o), c(n, i), c(n, a), c(a, l), c(a, d), c(a, m), c(e, h), b && b.m(e, null), _ || (g = z(n, "click", t[17]), _ = true);
+            C(v, e, w), c(e, n), c(n, s), c(s, o), c(n, i), c(n, a), c(a, l), c(a, d), c(a, m), c(e, h), b && b.m(e, null), _ || (g = z(n, "click", t[19]), _ = true);
           },
           p(v, w) {
-            w & 16 && r !== (r = v[4] ? "expand_less" : "expand_more") && W(o, r), w & 256 && f !== (f = v[8].length + "") && W(d, f), v[4] ? b ? b.p(v, w) : (b = Yl(v), b.c(), b.m(e, null)) : b && (b.d(1), b = null);
+            w[0] & 16 && r !== (r = v[4] ? "expand_less" : "expand_more") && W(o, r), w[0] & 512 && f !== (f = v[9].length + "") && W(d, f), v[4] ? b ? b.p(v, w) : (b = Yl(v), b.c(), b.m(e, null)) : b && (b.d(1), b = null);
           },
           d(v) {
             v && I(e), b && b.d(), _ = false, g();
@@ -9884,7 +9884,7 @@ Error:`, r);
         };
       }
       function Yl(t) {
-        let e, n = Se(t[8]), s = [];
+        let e, n = Se(t[9]), s = [];
         for (let r = 0; r < n.length; r += 1) s[r] = Kl(ql(t, n, r));
         return {
           c() {
@@ -9897,8 +9897,8 @@ Error:`, r);
             for (let i = 0; i < s.length; i += 1) s[i] && s[i].m(e, null);
           },
           p(r, o) {
-            if (o & 256) {
-              n = Se(r[8]);
+            if (o[0] & 512) {
+              n = Se(r[9]);
               let i;
               for (i = 0; i < n.length; i += 1) {
                 const a = ql(r, n, i);
@@ -9914,16 +9914,16 @@ Error:`, r);
         };
       }
       function Kl(t) {
-        let e, n, s, r, o, i, a = Kr(t[23]) + "", l, f, d, m = Jr(t[23]) + "", h, _, g, b, v;
+        let e, n, s, r, o, i, a = Kr(t[25]) + "", l, f, d, m = Jr(t[25]) + "", h, _, g, b, v;
         return {
           c() {
-            e = p("li"), n = p("a"), s = p("span"), s.textContent = "favorite_border", r = S(), o = p("span"), i = p("span"), l = O(a), f = S(), d = p("span"), h = O(m), _ = S(), g = p("span"), g.textContent = "chevron_right", v = S(), u(s, "class", "material-icons rel-icon ended svelte-81oe9z"), u(i, "class", "rel-name svelte-81oe9z"), u(d, "class", "rel-sub svelte-81oe9z"), u(o, "class", "rel-main svelte-81oe9z"), u(g, "class", "material-icons chevron svelte-81oe9z"), u(n, "class", "rel-row svelte-81oe9z"), u(n, "href", b = "#/relationships/" + ne(t[23].rawToken)), u(e, "class", "svelte-81oe9z");
+            e = p("li"), n = p("a"), s = p("span"), s.textContent = "favorite_border", r = S(), o = p("span"), i = p("span"), l = O(a), f = S(), d = p("span"), h = O(m), _ = S(), g = p("span"), g.textContent = "chevron_right", v = S(), u(s, "class", "material-icons rel-icon ended svelte-81oe9z"), u(i, "class", "rel-name svelte-81oe9z"), u(d, "class", "rel-sub svelte-81oe9z"), u(o, "class", "rel-main svelte-81oe9z"), u(g, "class", "material-icons chevron svelte-81oe9z"), u(n, "class", "rel-row svelte-81oe9z"), u(n, "href", b = "#/relationships/" + ne(t[25].rawToken)), u(e, "class", "svelte-81oe9z");
           },
           m(w, y) {
             C(w, e, y), c(e, n), c(n, s), c(n, r), c(n, o), c(o, i), c(i, l), c(o, f), c(o, d), c(d, h), c(n, _), c(n, g), c(e, v);
           },
           p(w, y) {
-            y & 256 && a !== (a = Kr(w[23]) + "") && W(l, a), y & 256 && m !== (m = Jr(w[23]) + "") && W(h, m), y & 256 && b !== (b = "#/relationships/" + ne(w[23].rawToken)) && u(n, "href", b);
+            y[0] & 512 && a !== (a = Kr(w[25]) + "") && W(l, a), y[0] & 512 && m !== (m = Jr(w[25]) + "") && W(h, m), y[0] & 512 && b !== (b = "#/relationships/" + ne(w[25].rawToken)) && u(n, "href", b);
           },
           d(w) {
             w && I(e);
@@ -9931,7 +9931,7 @@ Error:`, r);
         };
       }
       function aw(t) {
-        let e, n, s, r = Se(t[0]), o = [];
+        let e, n, s, r = Se(t[11]), o = [];
         for (let i = 0; i < r.length; i += 1) o[i] = Jl(Ml(t, r, i));
         return {
           c() {
@@ -9944,8 +9944,8 @@ Error:`, r);
             for (let l = 0; l < o.length; l += 1) o[l] && o[l].m(s, null);
           },
           p(i, a) {
-            if (a & 1) {
-              r = Se(i[0]);
+            if (a[0] & 2048) {
+              r = Se(i[11]);
               let l;
               for (l = 0; l < r.length; l += 1) {
                 const f = Ml(i, r, l);
@@ -9983,7 +9983,7 @@ Error:`, r);
             Add encounter`, u(n, "class", "material-icons empty-icon svelte-81oe9z"), u(r, "class", "svelte-81oe9z"), u(i, "class", "btn-filled svelte-81oe9z"), u(e, "class", "empty-state svelte-81oe9z");
           },
           m(f, d) {
-            C(f, e, d), c(e, n), c(e, s), c(e, r), c(e, o), c(e, i), a || (l = z(i, "click", t[18]), a = true);
+            C(f, e, d), c(e, n), c(e, s), c(e, r), c(e, o), c(e, i), a || (l = z(i, "click", t[20]), a = true);
           },
           p: Z,
           d(f) {
@@ -9992,7 +9992,7 @@ Error:`, r);
         };
       }
       function uw(t) {
-        let e, n = ne(t[20].rawToken).slice(0, 12) + "", s, r;
+        let e, n = ne(t[22].rawToken).slice(0, 12) + "", s, r;
         return {
           c() {
             e = p("span"), s = O(n), r = O("\u2026"), u(e, "class", "rel-sub enc-token svelte-81oe9z");
@@ -10001,7 +10001,7 @@ Error:`, r);
             C(o, e, i), c(e, s), c(e, r);
           },
           p(o, i) {
-            i & 1 && n !== (n = ne(o[20].rawToken).slice(0, 12) + "") && W(s, n);
+            i[0] & 2048 && n !== (n = ne(o[22].rawToken).slice(0, 12) + "") && W(s, n);
           },
           d(o) {
             o && I(e);
@@ -10009,7 +10009,7 @@ Error:`, r);
         };
       }
       function fw(t) {
-        let e, n = t[20].note + "", s;
+        let e, n = t[22].note + "", s;
         return {
           c() {
             e = p("span"), s = O(n), u(e, "class", "rel-sub enc-note svelte-81oe9z");
@@ -10018,7 +10018,7 @@ Error:`, r);
             C(r, e, o), c(e, s);
           },
           p(r, o) {
-            o & 1 && n !== (n = r[20].note + "") && W(s, n);
+            o[0] & 2048 && n !== (n = r[22].note + "") && W(s, n);
           },
           d(r) {
             r && I(e);
@@ -10026,20 +10026,20 @@ Error:`, r);
         };
       }
       function Jl(t) {
-        let e, n, s, r, o, i, a = t[20].date + "", l, f, d, m, h, _;
+        let e, n, s, r, o, i, a = t[22].date + "", l, f, d, m, h, _;
         function g(w, y) {
-          return w[20].note ? fw : uw;
+          return w[22].note ? fw : uw;
         }
         let b = g(t), v = b(t);
         return {
           c() {
-            e = p("li"), n = p("a"), s = p("span"), s.textContent = "check_circle_outline", r = S(), o = p("span"), i = p("span"), l = O(a), f = S(), v.c(), d = S(), m = p("span"), m.textContent = "chevron_right", _ = S(), u(s, "class", "material-icons rel-icon active svelte-81oe9z"), u(i, "class", "rel-name svelte-81oe9z"), u(o, "class", "rel-main svelte-81oe9z"), u(m, "class", "material-icons chevron svelte-81oe9z"), u(n, "class", "rel-row svelte-81oe9z"), u(n, "href", h = "#/encounters/" + ne(t[20].rawToken)), u(e, "class", "svelte-81oe9z");
+            e = p("li"), n = p("a"), s = p("span"), s.textContent = "check_circle_outline", r = S(), o = p("span"), i = p("span"), l = O(a), f = S(), v.c(), d = S(), m = p("span"), m.textContent = "chevron_right", _ = S(), u(s, "class", "material-icons rel-icon active svelte-81oe9z"), u(i, "class", "rel-name svelte-81oe9z"), u(o, "class", "rel-main svelte-81oe9z"), u(m, "class", "material-icons chevron svelte-81oe9z"), u(n, "class", "rel-row svelte-81oe9z"), u(n, "href", h = "#/encounters/" + ne(t[22].rawToken)), u(e, "class", "svelte-81oe9z");
           },
           m(w, y) {
             C(w, e, y), c(e, n), c(n, s), c(n, r), c(n, o), c(o, i), c(i, l), c(o, f), v.m(o, null), c(n, d), c(n, m), c(e, _);
           },
           p(w, y) {
-            y & 1 && a !== (a = w[20].date + "") && W(l, a), b === (b = g(w)) && v ? v.p(w, y) : (v.d(1), v = b(w), v && (v.c(), v.m(o, null))), y & 1 && h !== (h = "#/encounters/" + ne(w[20].rawToken)) && u(n, "href", h);
+            y[0] & 2048 && a !== (a = w[22].date + "") && W(l, a), b === (b = g(w)) && v ? v.p(w, y) : (v.d(1), v = b(w), v && (v.c(), v.m(o, null))), y[0] & 2048 && h !== (h = "#/encounters/" + ne(w[22].rawToken)) && u(n, "href", h);
           },
           d(w) {
             w && I(e), v.d();
@@ -10059,9 +10059,9 @@ Error:`, r);
             Ue(e.$$.fragment), n = S(), s = p("main"), r = p("div"), o = p("h1"), o.textContent = "Encounters", i = S(), a = p("button"), a.innerHTML = '<span class="material-icons">add</span>', l = S(), _ && _.c(), f = S(), v.c(), u(o, "class", "svelte-81oe9z"), u(a, "class", "fab svelte-81oe9z"), u(a, "title", "Add encounter"), u(r, "class", "page-header svelte-81oe9z"), u(s, "class", "svelte-81oe9z");
           },
           m(w, y) {
-            Oe(e, w, y), C(w, n, y), C(w, s, y), c(s, r), c(r, o), c(r, i), c(r, a), c(s, l), _ && _.m(s, null), c(s, f), v.m(s, null), d = true, m || (h = z(a, "click", t[13]), m = true);
+            Oe(e, w, y), C(w, n, y), C(w, s, y), c(s, r), c(r, o), c(r, i), c(r, a), c(s, l), _ && _.m(s, null), c(s, f), v.m(s, null), d = true, m || (h = z(a, "click", t[15]), m = true);
           },
-          p(w, [y]) {
+          p(w, y) {
             w[5] ? _ ? _.p(w, y) : (_ = Fl(w), _.c(), _.m(s, f)) : _ && (_.d(1), _ = null), b === (b = g(w)) && v ? v.p(w, y) : (v.d(1), v = b(w), v && (v.c(), v.m(s, null)));
           },
           i(w) {
@@ -10088,70 +10088,79 @@ Error:`, r);
         return (t.isHost ? "Host \xB7 " : "") + t.date;
       }
       function pw(t, e, n) {
-        let s, r, o = [], i = [], a = [], l = true, f = null, d = false, m = false, h = false, _ = null;
+        let s, r, o, i, a = [], l = [], f = [], d = true, m = null, h = false, _ = false, g = false, b = null;
         et(() => {
           if (!lt()) {
             de("/login");
             return;
           }
-          g();
+          v();
         });
-        function g() {
-          n(2, l = true), n(3, f = null);
+        function v() {
+          n(2, d = true), n(3, m = null);
           try {
-            n(0, o = Dd()), n(11, i = ra()), n(1, a = Od());
-          } catch (T) {
-            n(3, f = T.message);
+            n(0, a = Dd()), n(13, l = ra()), n(1, f = Od());
+          } catch (L) {
+            n(3, m = L.message);
           } finally {
-            n(2, l = false);
+            n(2, d = false);
           }
         }
-        async function b() {
-          n(6, h = true), n(7, _ = null);
+        async function w() {
+          n(6, g = true), n(7, b = null);
           try {
-            const T = $s(32), A = Tn(), L = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
-            await Md(T, L, true, A, null), await Yr(ne(Qn(T, 0)), L), n(5, m = false), de("/groups/" + ne(T));
-          } catch (T) {
-            n(7, _ = T.message);
+            const L = $s(32), D = Tn(), q = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
+            await Md(L, q, true, D, null), await Yr(ne(Qn(L, 0)), q), n(5, _ = false), de("/groups/" + ne(L));
+          } catch (L) {
+            n(7, b = L.message);
           } finally {
-            n(6, h = false);
+            n(6, g = false);
           }
         }
-        function v(T) {
-          li.call(this, t, T);
+        function y(L) {
+          li.call(this, t, L);
         }
-        const w = () => n(5, m = true), y = () => {
-          n(5, m = false), de("/encounter-exchange");
-        }, R = () => n(5, m = false), N = () => {
-          h || n(5, m = false);
-        }, E = () => n(4, d = !d), k = () => n(5, m = true);
+        const R = () => n(5, _ = true), N = () => {
+          n(5, _ = false), de("/encounter-exchange");
+        }, E = () => n(5, _ = false), k = () => {
+          g || n(5, _ = false);
+        }, T = () => n(4, h = !h), A = () => n(5, _ = true);
         return t.$$.update = () => {
-          t.$$.dirty & 2048 && n(9, s = i.filter((T) => !T.archived)), t.$$.dirty & 2048 && n(8, r = i.filter((T) => T.archived));
+          t.$$.dirty[0] & 1 && n(11, s = [
+            ...a
+          ].sort((L, D) => D.date.localeCompare(L.date))), t.$$.dirty[0] & 8192 && n(10, r = l.filter((L) => !L.archived).sort((L, D) => D.createdAt.localeCompare(L.createdAt))), t.$$.dirty[0] & 8192 && n(9, o = l.filter((L) => L.archived).sort((L, D) => D.createdAt.localeCompare(L.createdAt))), t.$$.dirty[0] & 2 && n(8, i = [
+            ...f
+          ].sort((L, D) => D.createdAt - L.createdAt));
         }, [
-          o,
           a,
-          l,
           f,
           d,
           m,
           h,
           _,
-          r,
-          s,
+          g,
           b,
           i,
-          v,
+          o,
+          r,
+          s,
           w,
+          l,
           y,
           R,
           N,
           E,
-          k
+          k,
+          T,
+          A
         ];
       }
       class mw extends Ce {
         constructor(e) {
-          super(), Ie(this, e, pw, dw, Te, {});
+          super(), Ie(this, e, pw, dw, Te, {}, null, [
+            -1,
+            -1
+          ]);
         }
       }
       function _w(t) {
